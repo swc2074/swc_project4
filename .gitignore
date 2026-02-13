@@ -77,3 +77,4 @@ coverage/
 .eslintcache
 stylelintcache
 /.metadata/
+swc_legacy_accessKeys.csv
