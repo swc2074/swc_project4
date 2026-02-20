@@ -77,3 +77,8 @@ coverage/
 .eslintcache
 stylelintcache
 /.metadata/
+
+
+# Environment variables
+.env
+.env.*
