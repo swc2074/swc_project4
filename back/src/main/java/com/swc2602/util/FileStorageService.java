@@ -23,7 +23,7 @@ public class FileStorageService {
             String filename = UUID.randomUUID() + "_" + file.getOriginalFilename(); // 파일명 충돌방지
             Path target = root.resolve(filename);   // uploads디렉토리안에 filename 붙여서 최종 저장경로 생성
             Files.copy(file.getInputStream(), target, StandardCopyOption.REPLACE_EXISTING);  // 파일복사
-            return "/uploads/" + filename;  //   uploads/ 파일
+            return "uploads/" + filename;  //   uploads/ 파일
         } catch (IOException e) {
             throw new RuntimeException("파일 업로드 실패", e);
         }
