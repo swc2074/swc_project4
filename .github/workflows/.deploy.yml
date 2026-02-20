@@ -3,7 +3,8 @@ name: Deploy Fullstack App   # 워크플로우 이름 정의
 on:     # 실행조건 정의
   push:    # push 이벤트 발생시 실행
     branches:   
-      - main   # main 브랜치에 push 될 때만 실행     
+      - main    # main 브랜치에 push 될 때만 실행     
+
 
 jobs:       # 실행할 job 정의
   backend:     # 백엔드 배포 job
@@ -265,9 +266,11 @@ jobs:       # 실행할 job 정의
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          script: rm -rf /home/ubuntu/legacy-boot/.env
 
-      # 8. .env 파일 복사 (파일로 확실히 반영)   
+          script: rm -rf /home/ubuntu/legacy-boot/.envb
+
+      # 8. .env 파일 복사 (파일로 확실히 반영)         
+
       - name: Copy Legacy Boot .env to EC2
         uses: appleboy/scp-action@v0.1.7
         with:

@@ -96,7 +96,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
  
-        configuration.setAllowedOrigins(List.of("http://localhost:3000", "http://13.239.246.183"));  //★ Front 포트번호
+        configuration.setAllowedOrigins(List.of("http://localhost:3000", "http://3.27.133.236"));  //★ Front 포트번호
 
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
